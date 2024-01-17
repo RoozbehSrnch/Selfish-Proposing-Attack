@@ -1,7 +1,7 @@
 import numpy as np
 
-class PoS_NaS():
-    def __init__(self, alpha, eta, n_node, n_array, n_input, block_period_length, N_future_block):
+class semi_predictable_LC_PoS():
+    def __init__(self, alpha, eta, n_node, n_array, state_1stPart_length, block_period_length, n_future_block):
         self.alpha = alpha
         self.eta = eta
         self.n_total = n_node
@@ -12,9 +12,9 @@ class PoS_NaS():
         self.target = 1 / (n_node * block_period_length)
         self.p_honest = (1 - alpha) / block_period_length
         self.p_attacker = alpha / block_period_length
-        self.state_1stPart_length = n_input
-        self.state_length = n_input + N_future_block
-        self.N_future_block = N_future_block
+        self.state_1stPart_length = state_1stPart_length
+        self.state_length = state_1stPart_length + n_future_block
+        self.N_future_block = n_future_block
 
     def reset(self):
         cntr = 0

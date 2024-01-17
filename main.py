@@ -6,14 +6,13 @@ from environment_LC_PoS_perfect_randomness import LC_PoS_perfect_randomness
 from environment_semi_predictable_LC_PoS import semi_predictable_LC_PoS
 from environment_full_predictable_LC_PoS import full_predictable_LC_PoS
 from environment_semi_predictable_LC_PoS_node_location import semi_predictable_LC_PoS_node_location
-from environment_semi_predictable_LC_PoS_transaction_pool import semi_predictable_LC_PoS_transaction_pool
 import os
 
 if __name__ == '__main__':
     # stake share
-    alpha = 1/3
+    alpha = 0.35
     # communication capability
-    eta = 0
+    eta = 0.5
     # expected number of slots to propose one block
     block_period_length = 20
     # the number of blocks in the honest fork for which
@@ -42,7 +41,7 @@ if __name__ == '__main__':
     # semi_predictable_LC_PoS
     agent = Agent(gamma=0.999999, epsilon=1, lr=0.0001, n_actions=3 * (n_array + 1), n_array=n_array,
                   input_dims=n_array + 5 + n_future_block,
-                  mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.99999, replace=10000, algo='Agent',
+                  mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.999994, replace=10000, algo='Agent',
                   env_name='semi_predictable_LC_PoS')
     env = semi_predictable_LC_PoS(alpha=alpha, eta=eta, n_node=n_node, n_array=n_array,
                                   state_1stPart_length=n_array + 5, block_period_length=block_period_length,
