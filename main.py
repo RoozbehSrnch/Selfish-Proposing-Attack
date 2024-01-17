@@ -34,7 +34,7 @@ if __name__ == '__main__':
     # # LC_PoS_perfect_randomness
     # agent = Agent(gamma=0.999999, epsilon=1, lr=0.0001, n_actions=3 * (n_array + 1), n_array=n_array,
     #               input_dims=n_array + 5,
-    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.99999, replace=10000, algo='Agent',
+    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.999994, replace=10000, algo='Agent',
     #               env_name='LC_PoS_perfect_randomness')
     # env = LC_PoS_perfect_randomness(alpha=alpha, eta=eta, n_array=n_array, block_period_length=block_period_length)
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     # # full_predictable_LC_PoS
     # agent = Agent(gamma=0.999999, epsilon=1, lr=0.0001, n_actions=3 * (n_array + 1), n_array=n_array,
     #               input_dims=n_array + 5 + n_future_block,
-    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.99999, replace=10000, algo='Agent',
+    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.999994, replace=10000, algo='Agent',
     #               env_name='full_predictable_LC_PoS')
     # env = full_predictable_LC_PoS(alpha=alpha, eta=eta, n_array=n_array, state_1stPart_length=n_array + 5,
     #                               n_future_block=n_future_block)
@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # # semi_predictable_LC_PoS_node_location
     # agent = Agent(gamma=0.999999, epsilon=1, lr=0.0001, n_actions=3 * (n_array + 1), n_array=n_array,
     #               input_dims=n_array + 5 + n_future_block,
-    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.99999, replace=10000, algo='Agent',
+    #               mem_size=700000, batch_size=128, eps_min=0.001, eps_dec=0.999994, replace=10000, algo='Agent',
     #               env_name='semi_predictable_LC_PoS_node_location')
     # env = semi_predictable_LC_PoS_node_location(alpha=alpha, n_node=n_node, n_array=n_array,
     #                               state_1stPart_length=n_array + 5, block_period_length=block_period_length,
